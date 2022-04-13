@@ -7,7 +7,10 @@ questions = {
     "1":{
         "id": "1",
         "question": "Letting go is about...",
-        "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"]
+        "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"],
+        "correct": "Experiencing the here and now",
+        "info": ["""Letting go is about releasing judgement on your thoughts 
+        and emotions. Judgement only increases the emotion""", """Correct"""]
     }
 }
 
