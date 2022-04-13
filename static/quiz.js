@@ -17,6 +17,12 @@ $(document).ready(function(){
             incorrect(id)
         }
     })
+
+    $("#continue").click(function(){
+        next = question["next"]
+        value = $("#" + id).attr("value")
+        window.location.href = "/quiz/" + next
+    })
 })
 
 function correct(id){

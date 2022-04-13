@@ -10,7 +10,18 @@ questions = {
         "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"],
         "correct": "Experiencing the here and now",
         "info": ["""Letting go is about releasing judgement on your thoughts 
-        and emotions. Judgement only increases the emotion""", """Correct"""]
+        and emotions. Judgement only increases the emotion""", """Correct"""],
+        "next": "2"
+    },
+    "2":{
+        "id": "2",
+        "question": "Box Breathing...",
+        "answers": ["Is something to be forced", "Is the only way to meditate", "Is an important tool in meditation","Solves all problems"],
+        "correct": "Is an important tool in meditation",
+        "info": ["""There is no need to force anythign in meditation. Your body knows
+        how to breath, just guide it to where you want it to go.""", """ There is no singular way
+        to meditate""", """Correct"""],
+        "next": "3"
     }
 }
 
