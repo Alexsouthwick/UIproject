@@ -7,6 +7,7 @@ $(document).ready(function(){
         $("#answers").append(new_answer)
     })
 
+
     $(".answer").click(function(event){
         id = event.target.id
         value = $("#" + id).attr("value")
@@ -20,8 +21,12 @@ $(document).ready(function(){
 
     $("#continue").click(function(){
         next = question["next"]
-        value = $("#" + id).attr("value")
-        window.location.href = "/quiz/" + next
+        if (next == '0'){
+            window.location.href = "/quiz/end"
+        }
+        else{
+            window.location.href = "/quiz/" + next
+        }
     })
 })
 

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function(){
+        $("#startq").click(function(){
+            window.location.href = "/quiz/1"
+        })
+    })
+</script>
+
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <button id="startq"> Start Quiz</button>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
