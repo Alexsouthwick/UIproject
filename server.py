@@ -10,7 +10,7 @@ questions = {
         "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"],
         "correct": "Experiencing the here and now",
         "info": ["""Letting go is about releasing judgement on your thoughts 
-        and emotions. Judgement only increases the emotion""", """Correct"""],
+        and emotions. Judgement only increases the emotion""","""Correct""","Not really, try again","There is no perfect way to meditate"],
         "next": "2"
     },
     "2":{
@@ -20,7 +20,7 @@ questions = {
         "correct": "Is an important tool in meditation",
         "info": ["""There is no need to force anythign in meditation. Your body knows
         how to breath, just guide it to where you want it to go.""", """ There is no singular way
-        to meditate""", """Correct"""],
+        to meditate""", """Correct""","""Nothing will solve all problem , but box breathing may facilitate it !"""],
         "next": "3"
     },
      "3":{
@@ -29,10 +29,12 @@ questions = {
         "answers": ["Is about interrogating your emotions", "Is about identifying with your emotions", "Is about returning to a place of peace","Is about controlling your mind"],
         "correct": "Is about returning to a place of peace",
         "info": ["""There is no need to interrogate your emotions. Emotions are like clouds,
-        just let them go, to return to your blue sky.""", """You don't need to identify your emotions""", """Correct"""],
+        just let them go, to return to your blue sky.""", """You don't need to identify your emotions""", """Correct""","Nope blue sky is never about this"],
         "next": "0"
     }
 }
+score = len(questions) * [0]
+not_answered = len(questions)* [True]
 
 
 
@@ -43,16 +45,41 @@ def homepage():
 
 @app.route('/quiz/start')
 def quiz_start():
+   global score 
+   global not_answered
+   score = len(questions) * [0]
+   not_answered = len(questions)* [True]
    return render_template('quiz_start.html')
 
-@app.route('/quiz/<id>')
+@app.route('/quiz/<id>', methods=['GET', 'POST'])
 def quiz(id=None):
+   print(id)
    question = questions[id]
-   return render_template('quiz.html', question=question)
+   total_score = sum (score)
+   return render_template('quiz.html', question_num = id, question=question,total_score = total_score)
+@app.route('/quiz/update_score', methods=['GET', 'POST'])
+def update_score():
+   global score 
+   global not_answered
+   answer = request.get_json()
+   correct = answer["correct"]
+   question_num = int(answer["id"]) - 1
+   print( question_num)
+   if correct == "true" and not_answered[question_num] == True:
+      print(not_answered[question_num])
+      score[question_num] = 1
+   elif not_answered[question_num]:
+      print("wrong")
+      not_answered[question_num] = False
+      print(not_answered)
+   total_score = sum(score)
+   print("put of if loop",not_answered)
+   return jsonify(total_score = total_score)
 
 @app.route('/quiz/end')
 def quiz_end():
-   return render_template('quiz_end.html')
+   total_score = sum (score)
+   return render_template('quiz_end.html',total_score = total_score)
 
 
 if __name__ == '__main__':

@@ -10,13 +10,37 @@ $(document).ready(function(){
 
     $(".answer").click(function(event){
         id = event.target.id
+        let correctness = "false"
         value = $("#" + id).attr("value")
         if(value == question["correct"]){
             correct(id)
+            correctness = "true"
         }
         else{
             incorrect(id)
         }
+        console.log("out of if statment")
+        answer_to_save = {"correct": correctness,"id": $("#question_num").html()}
+        console.log(id)
+        $.ajax({
+            type: "POST",
+            url: "update_score",                
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify(answer_to_save),
+            success: function(result){
+                let total_score = result["total_score"]
+                console.log(total_score)
+                $("#total_score").html(total_score + "/3" )
+                
+            },
+            error: function(request, status, error){
+                console.log("Error");
+                console.log(request)
+                console.log(status)
+                console.log(error)
+            }
+        });
     })
 
     $("#continue").click(function(){

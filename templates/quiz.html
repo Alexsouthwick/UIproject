@@ -5,15 +5,18 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 <script>
     let question = {{question|tojson}}
+    let total_score = {{total_score|tojson}}
+    let question_num = {{question_num|tojson}}
 </script>
 
 <div class = "row">
     <div class= "col-md-2">
     </div>
     <div class = "col-md-8 d-flex justify-content-center">
-        <div id = "question">
-            {{question.question}}
-        </div>
+        <span id= "question_num"> {{question_num}}</span>
+        <span id = "question">
+            .{{question.question}}
+        </span>
     </div>
 </div>
 <div class = "row">
@@ -25,8 +28,11 @@
         <div id = "answers">
         </div>
     </div>
-    <div class= "col-md-2">
+    <div class= "col-md-1">
         <button id="continue"> Continue</button>
+    </div>
+    <div class= "col-md-1">
+        <span> This is your current score: </span><span id = "total_score">{{total_score}}/3 </span>
     </div>
 </div>
 
