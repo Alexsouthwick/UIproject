@@ -33,13 +33,50 @@ questions = {
         "next": "0"
     }
 }
-
-
+module = {
+   "1":{
+      'id':"1", 
+      "title":"Letting Go",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_jõgi_Lahemaal.jpg/2560px-Altja_jõgi_Lahemaal.jpg",
+      "audio": "/GitHub/UIproject/audio_files/tape_1.mp3", 
+      "next":"2"
+   },
+   "2":{
+      "id":'2',
+      "title":"Box Breathing",  
+      "image": "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg", 
+      "audio": "/GitHub/UIproject/audio_files/tape_2.mp3",
+      "next":"3"
+   }, 
+   "3":{
+      "id": '3',
+      "title":"Blue Sky",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
+      "audio": "/GitHub/UIproject/audio_files/tape_3.mp3",
+      "next":"4"
+   },
+   "4":{
+      "id": "4",
+      "title": "Your first meditation",
+      "image":"https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1093840488-5-scaled.jpg?resize=1536,1024",
+      "audio": "/GitHub/UIproject/audio_files/tape_4.mp3",
+      "next":"0"
+   }
+}
 
 
 @app.route('/')
 def homepage():
    return render_template('homepage.html')
+@app.route('/learning/start')
+def learning_start():
+   return render_template('learning_start.html')
+
+@app.route('/learning/<id>')
+def learning(id=None):
+   module = module[id]
+   return render_template('learning.html', module=module)
+
 
 @app.route('/quiz/start')
 def quiz_start():
