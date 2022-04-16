@@ -54,6 +54,10 @@ def quiz(id=None):
 def quiz_end():
    return render_template('quiz_end.html')
 
+@app.route('/learning')
+def learning():
+   return render_template()
+
 
 if __name__ == '__main__':
    app.run(debug = True)
