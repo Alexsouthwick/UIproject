@@ -40,7 +40,7 @@ img {
     height: 70vh;
 }
 
-#startBtn, .continue-btn {
+#startBtn, .continue-btn, #startq {
     background-color: var(--primary-blue);
     color: white;
     padding: 10px 20px 10px 20px;
@@ -56,4 +56,21 @@ img {
 
 .continue-container {
     margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+# Quiz
+--------------------------------------------------------------*/
+.answer {
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 8px;
+}
+
+.answer:hover {
+    background-color: var(--primary-blue);
+    color: white;
 }
