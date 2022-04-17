@@ -81,6 +81,10 @@ def quiz_end():
    total_score = sum (score)
    return render_template('quiz_end.html',total_score = total_score)
 
+@app.route('/learning')
+def learning():
+   return render_template()
+
 
 if __name__ == '__main__':
    app.run(debug = True)
