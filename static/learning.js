@@ -1,6 +1,5 @@
 $(document).ready(function(){
     $("#continue").click(function(){
-        
         next = module["next"]
         console.log(next)
         if (next == '0'){

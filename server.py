@@ -41,28 +41,28 @@ modules = {
       'id': 1, 
       "title":"Letting Go",
       "image": "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-      "audio": "/GitHub/UIproject/audio_files/tape_1.mp3", 
+      "audio": "/static/audio_files/tape_1.mp3",
       "next": "2"
    },
    "2":{
       "id": "2",
       "title":"Box Breathing",  
       "image": "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg", 
-      "audio": "/GitHub/UIproject/audio_files/tape_2.mp3",
+      "audio": "/static/audio_files/tape_2.mp3",
       "next": "3"
    }, 
    "3":{
       "id": "3",
       "title":"Blue Sky",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
-      "audio": "/GitHub/UIproject/audio_files/tape_3.mp3",
+      "audio": "/static/audio_files/tape_3.mp3",
       "next": "4"
    },
    "4":{
       "id": "4",
       "title": "Your first meditation",
       "image":"https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1093840488-5-scaled.jpg?resize=1536,1024",
-      "audio": "/GitHub/UIproject/audio_files/tape_4.mp3",
+      "audio": "/static/audio_files/tape_4.mp3",
       "next": "0"
    }
 }
@@ -99,6 +99,7 @@ def quiz(id=None):
    question = questions[id]
    total_score = sum (score)
    return render_template('quiz.html', question_num = id, question=question,total_score = total_score)
+
 @app.route('/quiz/update_score', methods=['GET', 'POST'])
 def update_score():
    global score 
@@ -122,11 +123,6 @@ def update_score():
 def quiz_end():
    total_score = sum (score)
    return render_template('quiz_end.html',total_score = total_score)
-
-@app.route('/learning')
-def learning():
-   return render_template()
-
 
 if __name__ == '__main__':
    app.run(debug = True)

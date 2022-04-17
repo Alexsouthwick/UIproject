@@ -7,7 +7,22 @@
     let module = {{module|tojson}}
 </script>
 
-<div class = "row">
+<div class="row">
+    <div class="col-12 d-flex flex-column align-items-center">
+        <h1>{{module.title}}</h1>
+        <div class="module-photo">
+            <img src="{{module.image}}">
+        </div>
+        <div class="module-audio">
+            <audio src={{module.audio}} preload="auto" type="audio/mpeg" controls autoplay></audio> 
+        </div>
+    </div>
+</div>
+<div class="continue-container d-flex justify-content-end">
+    <button class="continue-btn" id="continue">Continue</button>
+</div>
+
+<!-- <div class = "row">
     <div class= "col-md-2">
     </div>
     <div class = "col-md-8 d-flex justify-content-center">
@@ -23,17 +38,12 @@
         </div>
     </div>
     <div class = "col-md-8 d-flex justify-content-center">
-        <div id = "audio">
-            <audio controls autoplay muted>
-                <source src="{{module.audio}}" type="audio/mpeg">
-              </audio>
-            
-        </div>
+       
     </div>
     <div class= "col-md-2">
         <button id="continue"> Continue</button>
     </div>
-</div>
+</div> -->
 
 
 {% endblock %}
