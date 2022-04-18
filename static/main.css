@@ -32,6 +32,17 @@ img {
     height: 100%;
 }
 
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+nav {
+    background-color: var(--primary-blue);
+}
+
+nav * {
+    color: white;
+}
+
 
 /*--------------------------------------------------------------
 # Home Page
@@ -54,8 +65,17 @@ img {
     height: 500px;
 }
 
-.continue-container {
+.module-audio {
     margin-top: 50px;
+}
+
+.continue-container {
+    padding: 10px 0px 10px 0px;
+    margin-top: 50px;
+}
+
+#takeQuizBtn {
+    margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
