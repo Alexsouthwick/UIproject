@@ -3,8 +3,8 @@ $(document).ready(function(){
     $("#answers").empty();
     console.log(question["answers"])
     $.each(question["answers"], function(i, value){
-        let new_answer= $("<div><button type='submit' class='answer' id='" + i + "' value='" + value + "'>" + value + "</button></div>")
-        $("#answers").append(new_answer)
+        let new_answer= $("<div><button type='submit' class='answer' id='" + i + "' value='" + value + "'>" + value + "</button></div>");
+        $("#answers").append(new_answer);
     })
 
 
@@ -28,44 +28,43 @@ $(document).ready(function(){
             dataType : "json",
             contentType: "application/json; charset=utf-8",
             data : JSON.stringify(answer_to_save),
-            success: function(result){
-                let total_score = result["total_score"]
-                console.log(total_score)
-                $("#total_score").html(total_score + "/3" )
+            success: function(result) {
+                let total_score = result["total_score"];
+                console.log(total_score);
+                $("#total_score").html(total_score + "/3" );
                 
             },
             error: function(request, status, error){
                 console.log("Error");
-                console.log(request)
-                console.log(status)
-                console.log(error)
+                console.log(request);
+                console.log(status);
+                console.log(error);
             }
         });
     })
 
     $("#continue").click(function(){
-        next = question["next"]
+        next = question["next"];
         if (next == '0'){
-            window.location.href = "/quiz/end"
+            window.location.href = "/quiz/end";
         }
         else{
-            window.location.href = "/quiz/" + next
+            window.location.href = "/quiz/" + next;
         }
     })
-})
+});
 
 function correct(id){
-    $("#info").empty()
-    $("#continue").show()
+    $("#info").empty();
+    $("#continue").show();
     info = question["info"][id]
-    let new_info= $("<div class'incorrectinfo'>" + info + "</div>")
-    $("#info").append(new_info)
+    let new_info= $("<p class='correct-info'>" + info + "</p>");
+    $("#info").append(new_info);
 }
 
 function incorrect(id){
-    $("#info").empty()
-    info = question["info"][id]
-    let new_info= $("<div class'incorrectinfo'>" + info + "</div>")
-    $("#info").append(new_info)
-
+    $("#info").empty();
+    info = question["info"][id];
+    let new_info= $("<p class='incorrect-info'>" + info + "</p>");
+    $("#info").append(new_info);
 }
