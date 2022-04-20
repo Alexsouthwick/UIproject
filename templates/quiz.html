@@ -8,14 +8,38 @@
     let total_score = {{total_score|tojson}}
     let question_num = {{question_num|tojson}}
 </script>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="question-container d-flex">
+            <h2 id="questionNum">{{question_num}}</h2>
+            <h2>. {{question.question}}</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <div id="info">
+        </div>
+    </div>
+    <div class="col-8 d-flex justify-content-center">
+        <div id="answers">
+        </div>
+    </div>
+    <div class="col-2">
+        <div>
+            <p>Your Score: <span id ="totalScore">{{total_score}}/3</span></p>
+        </div>
+    </div>
+</div>
 
-<div class = "row">
+
+<!-- <div class = "row">
     <div class= "col-md-2">
     </div>
     <div class = "col-md-8 d-flex justify-content-center">
         <span id="question_num">{{question_num}}</span>
-        <span id ="question">
-            .{{question.question}} {
+        <span id="question">
+            . {{question.question}} 
         </span>
     </div>
 </div>
@@ -34,7 +58,7 @@
     <div class= "col-md-1">
         <span> This is your current score: </span><span id = "total_score">{{total_score}}/3 </span>
     </div>
-</div>
+</div> -->
 
 
 {% endblock %}

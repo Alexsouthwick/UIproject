@@ -1,32 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation</title>
+
+   <!-- jquery -->
+   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: #4B8090;">
+    <a class="navbar-brand" href="/">Meditation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/learning/1">Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/quiz/start">Quiz</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" id="content">   
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="icon" href="data:,">
 
-<!-- jquery -->
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
 
-  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
-
-
-
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
     <title>UI Project</title>
   </head>
   <body>
     
 
     
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
+<nav class="navbar navbar-expand-lg justify-content-between">
     <a class="navbar-brand" href="/">UI Project</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,16 +81,12 @@
         <a class="nav-link" href="/quiz/start">Quiz</a>
       </div>
     </div>
-  </div>
 </nav>
 
-    <div class="container" id="content">   
-        {% block content %}
-        {% endblock %}
-    </div>
+   
 
   </body>
-</html>
+</html> -->
 
 
 
