@@ -38,10 +38,18 @@ img {
 # Navigation
 --------------------------------------------------------------*/
 .navbar {
-    padding: 10px 30px 10px 30px;
+    padding: 10px 50px 10px 40px;
 }
 nav * {
     color: white;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.navbar-nav {
+    gap: 10px;
 }
 
 
@@ -59,9 +67,18 @@ nav * {
     border-radius: 60px;
 }
 
+.hero-container {
+    padding-top: 50px;
+    height: 100%;
+}
+
+
 /*--------------------------------------------------------------
 # Learning
 --------------------------------------------------------------*/
+.module-title {
+    margin-bottom: 20px;
+}
 .module-photo {
     height: 500px;
 }
@@ -82,9 +99,23 @@ nav * {
 /*--------------------------------------------------------------
 # Quiz
 --------------------------------------------------------------*/
+.quiz-metrics {
+    width: 100%;
+}
+
+.quiz-metrics * {
+    color: var(--secondary-brown);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.quiz-title {
+    margin-bottom: 20px;
+}
+
 .answer {
     margin: 5px 0px 5px 0px;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 20px 10px 20px;
     width: 100%;
     border: 1px solid var(--primary-blue);
     color: var(--primary-blue);
@@ -115,4 +146,13 @@ nav * {
 
 .incorrect-info {
     background-color: var(--red);
+}
+
+#returnTo {
+    height: 30vh;
+    margin-top: 40px;
+}
+
+#returnTo > .col-6 {
+    gap: 80px;
 }

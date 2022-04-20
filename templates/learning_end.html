@@ -4,12 +4,25 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learning.js') }}"></script>
 
-<div class = "row">
-    <div class="col-12 d-flex flex-column align-items-center">
-        <h1>Congratulations you have finished learning</h1>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <p>Take the quiz to test your knowledge, it will take less than 5 minutes.</p>
+    </div>
+</div>
+<div class="row" id="returnTo">
+    <div class="col-6 d-flex flex-column align-items-center">
+        <a href="#">Letting Go</a>
+        <a href="#">Box Breathing</a>
+    </div>
+    <div class="col-6 d-flex flex-column align-items-center">
+        <a href="#">Blue Sky</a>
+        <a href="#">Your First Meditation</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
         <button class="continue-btn" id="takeQuizBtn">Take the Quiz</button>
     </div>
 </div>
-
 
 {% endblock %}

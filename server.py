@@ -96,8 +96,9 @@ def quiz_start():
 @app.route('/quiz/<id>', methods=['GET', 'POST'])
 def quiz(id=None):
    question = questions[id]
+   total_questions = len(questions)
    total_score = sum (score)
-   return render_template('quiz.html', question_num = id, question=question,total_score = total_score)
+   return render_template('quiz.html', question_num = id, question=question,total_score = total_score, total_questions = total_questions)
 
 @app.route('/quiz/update_score', methods=['GET', 'POST'])
 def update_score():
