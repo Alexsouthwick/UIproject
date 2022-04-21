@@ -1,6 +1,8 @@
 :root {
     --primary-blue: #4B8090;
     --secondary-brown: #C09471;
+    --green: rgba(10, 82, 26, 0.6);
+    --red: rgba(252, 1, 1, 0.3);
 }
 
 * {
@@ -35,12 +37,19 @@ img {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-nav {
-    background-color: var(--primary-blue);
+.navbar {
+    padding: 10px 50px 10px 40px;
 }
-
 nav * {
     color: white;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.navbar-nav {
+    gap: 10px;
 }
 
 
@@ -58,9 +67,18 @@ nav * {
     border-radius: 60px;
 }
 
+.hero-container {
+    padding-top: 50px;
+    height: 100%;
+}
+
+
 /*--------------------------------------------------------------
 # Learning
 --------------------------------------------------------------*/
+.module-title {
+    margin-bottom: 20px;
+}
 .module-photo {
     height: 500px;
 }
@@ -81,10 +99,24 @@ nav * {
 /*--------------------------------------------------------------
 # Quiz
 --------------------------------------------------------------*/
+.quiz-metrics {
+    width: 100%;
+}
+
+.quiz-metrics * {
+    color: var(--secondary-brown);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.quiz-title {
+    margin-bottom: 20px;
+}
+
 .answer {
     margin: 5px 0px 5px 0px;
-    padding: 10px;
-    width: 200px;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
     border: 1px solid var(--primary-blue);
     color: var(--primary-blue);
     border-radius: 8px;
@@ -93,4 +125,34 @@ nav * {
 .answer:hover {
     background-color: var(--primary-blue);
     color: white;
+}
+
+#info {
+    width: 200px;
+    height: 300px;
+}
+
+.correct-info, .incorrect-info {
+    width: 100%;
+    height: 100%; 
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.correct-info {
+    background-color: var(--green);
+}
+
+.incorrect-info {
+    background-color: var(--red);
+}
+
+#returnTo {
+    height: 30vh;
+    margin-top: 40px;
+}
+
+#returnTo > .col-6 {
+    gap: 80px;
 }
