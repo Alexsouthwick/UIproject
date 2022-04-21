@@ -31,7 +31,7 @@ $(document).ready(function(){
             success: function(result){
                 let total_score = result["total_score"]
                 console.log(total_score)
-                $("#total_score").html(total_score + "/3" )
+                $("#total_score").html(total_score)
                 
             },
             error: function(request, status, error){

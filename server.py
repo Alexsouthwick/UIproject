@@ -1,11 +1,12 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
+import random
 app = Flask(__name__)
 
 questions = {
     "1":{
-        "id": 1,
+        "id": "1",
         "question": "Letting go is about...",
         "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"],
         "correct": "Experiencing the here and now",
@@ -30,9 +31,34 @@ questions = {
         "correct": "Is about returning to a place of peace",
         "info": ["""There is no need to interrogate your emotions. Emotions are like clouds,
         just let them go, to return to your blue sky.""", """You don't need to identify your emotions""", """Correct""","Nope blue sky is never about this"],
-        "next": "0"
-    }
-}
+        "next": "4"
+    },
+       "4":
+       {
+         "id": "4",
+         "question": "To let go I must: ",
+         "answers": ["Let go of everything forever","Think about what to let go","Direct my focus on something","Letting go will solve all of my problems."],
+         "correct": "Direct my focus on something",
+         "info":["There is no need to let go of everything forever, it is an impossible task. Letting go just means giving your mind a break so you can enjoy the present moment.",
+         "When letting, you do not need to actively think about anything. Thinking is often the cause of mental suffering, so to let go, just allow your mind to focus on your breathing, or at nothing at all.",
+         "Letting go does not mean to fogo perception. Letting go means observing the present, and not ruminating on the past or future.",
+         "No act in mediation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself To better solve your problems. "],
+         "next": "5"
+       },
+       "5":
+       {
+         "id": "5",
+         "question": "Meditation …  ",
+         "answers": ["Involves only letting go","constistes Techniques that must be mastered","Is a cure for all your problems","Meditation allows you to step back and observe"],
+         "correct": "Meditation allows you to step back and observe",
+         "info":["Meddition involves lots of different techniques, not only letting go. ",
+         "Nothing in meditation needs to be mastered, all one needs to do is begin.",
+         " No act in mediation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself.",
+         "The purpose of meditation is to give your mind a break, the core of meditation is observing the present moment."],
+         "next": "6"
+       }
+   }
+
 score = len(questions) * [0]
 not_answered = len(questions)* [True]
 
@@ -91,14 +117,15 @@ def quiz_start():
    global not_answered
    score = len(questions) * [0]
    not_answered = len(questions)* [True]
+   shuffel_question()
    return render_template('quiz_start.html')
 
 @app.route('/quiz/<id>', methods=['GET', 'POST'])
 def quiz(id=None):
-   print(id)
+
    question = questions[id]
    total_score = sum (score)
-   return render_template('quiz.html', question_num = id, question=question,total_score = total_score)
+   return render_template('quiz.html',total_num = len(questions), question_num = id, question=question,total_score = total_score)
 
 @app.route('/quiz/update_score', methods=['GET', 'POST'])
 def update_score():
@@ -107,22 +134,53 @@ def update_score():
    answer = request.get_json()
    correct = answer["correct"]
    question_num = int(answer["id"]) - 1
-   print( question_num)
+
    if correct == "true" and not_answered[question_num] == True:
-      print(not_answered[question_num])
+
       score[question_num] = 1
    elif not_answered[question_num]:
-      print("wrong")
+
       not_answered[question_num] = False
-      print(not_answered)
+
    total_score = sum(score)
-   print("put of if loop",not_answered)
+
    return jsonify(total_score = total_score)
 
 @app.route('/quiz/end')
 def quiz_end():
    total_score = sum (score)
    return render_template('quiz_end.html',total_score = total_score)
+def shuffel_question():
+   print("in shuffel")
+   global questions
+   new_question_list = {}
+   questions_list = list(questions.items())
+   random.shuffle(questions_list)
+   for i in range(1,len(questions)):# not going to reset the next value for the last question
+      new_id = str(i)
+      question = questions_list.pop()[1]
+      question["id"] = new_id
+      question["next"] = str(i+1)
+      new_question_list[new_id] =question #add the question to the dictionary
+   #deal with the last question
+   last_question_id = str(len(questions))
+   last_question = questions_list.pop()[1]
+   last_question["id"] = last_question_id
+   last_question["next"] = "0"
+   new_question_list[last_question_id] = last_question
+   questions = new_question_list
+   return questions
+
+
+   
+
+
+
+
 
 if __name__ == '__main__':
+   shuffel_question()
    app.run(debug = True)
+   
+
+
