@@ -2,12 +2,7 @@ $(document).ready(function(){
     $("#continue").click(function(){
         next = module["next"]
         console.log(next)
-        if (next == '0'){
-            window.location.href = "/learning/end"
-        }
-        else{
-            window.location.href = "/learning/" + next
-        }
+        window.location.href = "/report/" + module["id"]
     });
 
     $("#takeQuizBtn").click(function() {

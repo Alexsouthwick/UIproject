@@ -64,7 +64,7 @@ not_answered = len(questions)* [True]
 
 modules = {
    "1":{
-      'id': 1, 
+      "id": "1", 
       "title":"Letting Go",
       "image": "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
       "audio": "/static/audio_files/tape_1.mp3",
@@ -126,6 +126,7 @@ def quiz(id=None):
    total_questions = len(questions)
    total_score = sum (score)
    return render_template('quiz.html',total_num = len(questions), question_num = id, question=question,total_score = total_score)
+
 @app.route('/quiz/update_score', methods=['GET', 'POST'])
 def update_score():
    global score 
@@ -170,7 +171,10 @@ def shuffel_question():
    questions = new_question_list
    return questions
 
-
+@app.route('/report/<id>')
+def report(id=None):
+   module = modules[id]
+   return render_template('report.html', module=module)
    
 
 

@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'report.js') }}"></script>
+<script>
+    let module = {{module|tojson}}
+</script>
+
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div id ="question">
+            How did this exercise make you feel?
+        </div>
+    </div>
+</div>
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div class="slidecontainer">
+            <label class="float-left">Agitated</label>
+            <label class="float-right">Relaxed</label>
+            <input type="range" min="0" max="50" value="25" class="slider">
+            <span class="float-center"><label class="float-center">The same</label></span>
+        </div>
+    </div>
+    <div class= "col-md-2">
+    </div>
+</div>
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div class="checking">
+            Are you...
+            <div class="check">
+                <input type="checkbox" id="breathing">
+                <label for="breathing"> Focusing on your breathing?</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="body">
+                <label for="body"> Checking in with your body?</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="thoughts">
+                <label for="thoughts"> Letting go of your thoughts?</label><br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div class="notes">
+            <div>Notes:</div>
+            <textarea id="notes_box" rows="4" cols="50" placeholder="Write any notes for yourself or any thoughts that you have here."></textarea>
+        </div>
+    </div>
+</div>
+<div class = "row">
+    <div class="col-md-10">
+    </div>
+    <div class= "col-md-2">
+        <button class="continue-btn" id="next">Next Lesson</button>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
