@@ -58,6 +58,7 @@ questions = {
          "next": "6"
        }
    }
+reports = {} # datastructure as "id" as key , and then a sub dictionary where id, breathing , feelings. body. thoughts, notes
 
 score = len(questions) * [0]
 not_answered = len(questions)* [True]
@@ -175,7 +176,21 @@ def shuffel_question():
 def report(id=None):
    module = modules[id]
    return render_template('report.html', module=module)
-   
+@app.route('/report/submit', methods=['GET', 'POST'])
+def submit():
+   global reports
+   new_report = {}
+   report = request.get_json() # get date from the website
+   print(report)
+   report_id = report["id"]
+   notes = report["notes"]
+   breathing =  report["breathing"]
+   body = report["body"]
+   thoughts = report["thoughts"]
+   new_report = {"id": report_id, "breathing":breathing, "body": body,  "thoughts":thoughts,"new_report": new_report }
+   reports[report_id] = new_report
+   print(reports)
+   return "HI"
 
 
 
