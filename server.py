@@ -187,7 +187,10 @@ def submit():
    breathing =  report["breathing"]
    body = report["body"]
    thoughts = report["thoughts"]
-   new_report = {"id": report_id, "breathing":breathing, "body": body,  "thoughts":thoughts,"new_report": new_report }
+   feelings = report["feelings"]
+   new_report = {"id": report_id, "breathing":breathing, "body": body, 
+    "thoughts":thoughts,"new_report": new_report,"notes":notes,
+   "feelings":feelings }
    reports[report_id] = new_report
    print(reports)
    return "HI"

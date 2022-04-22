@@ -1,5 +1,6 @@
 $(document).ready(function(){
     let report = {"id": module["id"]}
+    report["feelings"] = 0
     report["notes"] = ""
     report["breathing"] = false
     report["body"] = false
@@ -42,5 +43,12 @@ $(document).ready(function(){
     })
     $("#thoughts").click(function(){
         report["thoughts"] = $("#thoughts").is(':checked')
+    })
+    $("#feeling_scale").click(function () {
+        console.log("feelings")
+        console.log($("#feeling_scale").val())
+        feelings =  Math.floor($("#feeling_scale").val()/5) - 5
+        report["feelings"] = feelings
+        console.log(feelings)
     })
 })
