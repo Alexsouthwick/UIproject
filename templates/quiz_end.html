@@ -9,16 +9,33 @@
 <div class="row">
     <div class= "col-md-2">
     </div>
-    <div class = "col-md-8">
-        You have finished the quiz. And you have a score of {{total_score}}
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div class = "info">
+            Congratulations! You have finished the quiz!
+        </div>
     </div>
 </div>
+
+<div class = "row">
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <div class = "info">
+            You scored {{total_score}}/6
+        </div>
+    </div>
+</div>
+
 <div class = "row"> 
-    <a href="/quiz/start">
-        <button class="continue-btn"> 
-           Restart Quiz
-        </button>
-    </a>
+    <div class= "col-md-2">
+    </div>
+    <div class = "col-md-8 d-flex justify-content-center">
+        <a href="/quiz/start">
+            <button class="continue-btn"> 
+               Restart Quiz
+            </button>
+        </a>
+    </div>
 </div>
 
 
