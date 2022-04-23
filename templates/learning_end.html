@@ -2,26 +2,111 @@
 
 {% block content %}
 
-<script type="text/javascript" src="{{ url_for('static', filename = 'learning.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'learning_end.js') }}"></script>
+<script>
+    let reports = {{reports|tojson}}
+</script>
 
 <div class="row">
     <div class="col-12 d-flex justify-content-center">
-        <p>Take the quiz to test your knowledge, it will take less than 5 minutes.</p>
+        How you responded throught the exercises:
     </div>
 </div>
-<div class="row" id="returnTo">
-    <div class="col-6 d-flex flex-column align-items-center">
-        <a href="#">Letting Go</a>
-        <a href="#">Box Breathing</a>
+<div class="row">
+    <div class="col-3 d-flex flex-column align-items-center">
+        After Letting Go:
     </div>
-    <div class="col-6 d-flex flex-column align-items-center">
-        <a href="#">Blue Sky</a>
-        <a href="#">Your First Meditation</a>
+    <div class="col-3 d-flex flex-column align-items-center">
+        After Box Breathing:
+    </div>
+    <div class="col-3 d-flex flex-column align-items-center">
+        After Blue Sky:
+    </div>
+    <div class="col-3 d-flex flex-column align-items-center">
+        After Final Meditation:
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        Emotionally: <span class="response" id="let_feel"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Emotionally: <span class="response" id="bre_feel"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Emotionally: <span class="response" id="sky_feel"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Emotionally: <span class="response" id="fin_feel"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        Focusing on Breathing? <span class="response" id="let_bre"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Focusing on Breathing? <span class="response" id="bre_bre"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Focusing on Breathing? <span class="response" id="sky_bre"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Focusing on Breathing? <span class="response" id="fin_bre"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        Listening to your body? <span class="response" id="let_bod"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Listening to your body? <span class="response" id="bre_bod"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Listening to your body? <span class="response" id="sky_bod"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Listening to your body? <span class="response" id="fin_bod"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        Releasing thoughts? <span class="response" id="let_tho"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Releasing thoughts? <span class="response" id="bre_tho"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Releasing thoughts? <span class="response" id="sky_tho"></span>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Releasing thoughts? <span class="response" id="fin_tho"></span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        Notes: <div class="response" id="let_notes"></div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Notes: <div class="response" id="bre_notes"></div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Notes: <div class="response" id="sky_notes"></div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        Notes: <div class="response" id="fin_notes"></div>
     </div>
 </div>
 <div class="row">
     <div class="col-12 d-flex justify-content-center">
-        <button class="continue-btn" id="takeQuizBtn">Take the Quiz</button>
+        <div class = "info">
+            <div>Congratulations! You finished the learning portion!</div>
+            <div>Are you ready to take the quiz?</div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <button class="continue-btn" id="takeQuizBtn">Go to Quiz</button>
     </div>
 </div>
 

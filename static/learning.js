@@ -4,8 +4,4 @@ $(document).ready(function(){
         console.log(next)
         window.location.href = "/report/" + module["id"]
     });
-
-    $("#takeQuizBtn").click(function() {
-        window.location.href = "/quiz/start"
-    });
 })

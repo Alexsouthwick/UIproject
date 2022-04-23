@@ -127,7 +127,7 @@ def learning(id=None):
 
 @app.route('/learning/end')
 def learning_end():
-   return render_template('learning_end.html')
+   return render_template('learning_end.html', reports=reports)
 
 @app.route('/quiz/start')
 def quiz_start():
@@ -193,6 +193,7 @@ def shuffel_question():
 def report(id=None):
    module = modules[id]
    return render_template('report.html', module=module)
+
 @app.route('/report/submit', methods=['GET', 'POST'])
 def submit():
    global reports
@@ -206,7 +207,7 @@ def submit():
    thoughts = report["thoughts"]
    feelings = report["feelings"]
    new_report = {"id": report_id, "breathing":breathing, "body": body, 
-    "thoughts":thoughts,"new_report": new_report,"notes":notes,
+    "thoughts":thoughts,"notes":notes,
    "feelings":feelings }
    reports[report_id] = new_report
    print(reports)

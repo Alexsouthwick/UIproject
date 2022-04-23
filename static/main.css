@@ -207,4 +207,12 @@ nav * {
 
 textarea:focus::placeholder {
     color: transparent;
-  }
+}
+
+.response{
+    margin: 10px;
+}
+
+.info{
+    margin: 10px;
+}
