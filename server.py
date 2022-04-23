@@ -8,10 +8,12 @@ questions = {
     "1":{
         "id": "1",
         "question": "Letting go is about...",
-        "answers": ["Judging Emotion", "Experiencing the here and now","Being openminded", "Perfecting meditation"],
+        "answers": ["Judging Emotion", "Experiencing the here and now","Making happiness", "Perfecting meditation"],
         "correct": "Experiencing the here and now",
         "info": ["""Letting go is about releasing judgement on your thoughts 
-        and emotions. Judgement only increases the emotion""","""Correct""","Not really, try again","There is no perfect way to meditate"],
+        and emotions. Judgement only increases the emotion""","""Letting Go is about relishing in the current moment, 
+        allowing your mind to rest and feel at peace""","""You can’t make happiness, happiness like any other emotion is 
+        a feeling that comes and goes, you can release expectations and happiness will come in time.""","There is no perfect way to meditate"],
         "next": "2"
     },
     "2":{
@@ -20,8 +22,9 @@ questions = {
         "answers": ["Is something to be forced", "Is the only way to meditate", "Is an important tool in meditation","Solves all problems"],
         "correct": "Is an important tool in meditation",
         "info": ["""There is no need to force anythign in meditation. Your body knows
-        how to breath, just guide it to where you want it to go.""", """ There is no singular way
-        to meditate""", """Correct""","""Nothing will solve all problem , but box breathing may facilitate it !"""],
+        how to breath, just guide it to where you want it to go.""", """There are many ways to meditate, breathing 
+        is an important tool, but not the only one.""", """Breathing is one of the many tools of meditation, it is often the first 
+        one you learn and serves as a great base.""","""Nothing solves all problems. Meditation is not meant to solve problems but give your mind a rest."""],
         "next": "3"
     },
     "3":{
@@ -30,32 +33,46 @@ questions = {
         "answers": ["Is about interrogating your emotions", "Is about identifying with your emotions", "Is about returning to a place of peace","Is about controlling your mind"],
         "correct": "Is about returning to a place of peace",
         "info": ["""There is no need to interrogate your emotions. Emotions are like clouds,
-        just let them go, to return to your blue sky.""", """You don't need to identify your emotions""", """Correct""","Nope blue sky is never about this"],
+        just let them go, to return to your blue sky.""", """You are not your emotions. See your emotions as clouds. They don’t define you, just let 
+        them go.""", """When clouds come, let them go, and return to a place of happy confidence. Return to the blue sky. """,
+        "There is no need to control your mind, emotions or thoughts. Remain at peace and let them go."],
         "next": "4"
     },
        "4":
        {
          "id": "4",
          "question": "To let go I must: ",
-         "answers": ["Let go of everything forever","Think about what to let go","Direct my focus on something","Letting go will solve all of my problems."],
+         "answers": ["Let go of everything forever","Think about what to let go","Direct my focus on something","Try to solve all of my problems"],
          "correct": "Direct my focus on something",
          "info":["There is no need to let go of everything forever, it is an impossible task. Letting go just means giving your mind a break so you can enjoy the present moment.",
-         "When letting, you do not need to actively think about anything. Thinking is often the cause of mental suffering, so to let go, just allow your mind to focus on your breathing, or at nothing at all.",
-         "Letting go does not mean to fogo perception. Letting go means observing the present, and not ruminating on the past or future.",
-         "No act in mediation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself To better solve your problems. "],
+         "When letting go, you do not need to actively think about anything. Thinking is often the cause of mental suffering, so to let go, just allow your mind to focus on your breathing.",
+         "Letting go does not mean to forgo perception. Letting go means observing the present, and not ruminating on the past or future.",
+         "No act in meditation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself To better solve your problems. "],
          "next": "5"
        },
        "5":
        {
          "id": "5",
          "question": "Meditation …  ",
-         "answers": ["Involves only letting go","constistes Techniques that must be mastered","Is a cure for all your problems","Meditation allows you to step back and observe"],
-         "correct": "Meditation allows you to step back and observe",
-         "info":["Meddition involves lots of different techniques, not only letting go. ",
+         "answers": ["Involves only letting go","Consists of techniques that must be mastered","Is a cure for all your problems","Allows you to step back and observe"],
+         "correct": "Allows you to step back and observe",
+         "info":["Meditation involves lots of different techniques, not only letting go. ",
          "Nothing in meditation needs to be mastered, all one needs to do is begin.",
-         " No act in mediation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself.",
+         "No act in meditation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself.",
          "The purpose of meditation is to give your mind a break, the core of meditation is observing the present moment."],
          "next": "6"
+       },
+       "6":
+       {
+         "id": "6",
+         "question": "Box Breathing…  ",
+         "answers": ["Is proven to reduce short term stress","Is the main meditation tool","Is as effective as exercise to reduce long term stress","Will fix your problems"],
+         "correct": "Is proven to reduce short term stress",
+         "info":["Correct. Many studies have concluded that box breathing can reduce short term stress for people.",
+         "There is no main mediation tool. Box breathing is one that can reduce stress and be incorporated with others to enhance mindfulness.",
+         "Box breathing is for short term stress and can gradually increase mindfulness.",
+         "No mediation technique can fix your problems, but can help you get to a place where you are in a position to help yourself."],
+         "next": "7"
        }
    }
 reports = {} # datastructure as "id" as key , and then a sub dictionary where id, breathing , feelings. body. thoughts, notes
