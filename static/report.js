@@ -47,7 +47,7 @@ $(document).ready(function(){
     $("#feeling_scale").click(function () {
         console.log("feelings")
         console.log($("#feeling_scale").val())
-        feelings =  Math.floor($("#feeling_scale").val()/5) - 5
+        feelings =  $("#feeling_scale").val()
         report["feelings"] = feelings
         console.log(feelings)
     })

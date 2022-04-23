@@ -7,19 +7,19 @@ $(document).ready(function(){
     for(let k in reports){
         let report = reports[k]
         let new_feel = ""
-        if (report["feelings"] < 0 && report["feelings"] > -5){
+        if (report["feelings"] < 0 && report["feelings"] > -25){
             new_feel = "Slightly Agitated"
         }
-        else if(report["feelings"] > 0 && report["feelings"] < 5){
+        else if(report["feelings"] > 0 && report["feelings"] < 25){
             new_feel = "Slightly Relaxed"
         }
         else if(report["feelings"] == 0){
             new_feel = "The Same"
         }
-        else if(report["feelings"] == -5){
+        else if(report["feelings"] == -25){
             new_feel = "Agitated"
         }
-        else if(report["feelings"] == 5){
+        else if(report["feelings"] == 25){
             new_feel = "Relaxed"
         }
         let new_breath = report["breathing"].toString()
