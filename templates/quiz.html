@@ -10,35 +10,35 @@
     let total_num = {{total_num|tojson}}
 </script>
 
-<div class = "row">
-    <div class= "col-md-2">
-    </div>
-    <div class = "col-md-8 d-flex justify-content-center">
-        <span id="question_num" hidden>{{question_num}}</span>
-        <h2 id ="question">
-            {{question.question}} 
-        </h2>
-    </div>
-</div>
-<div class = "row">
-    <div class= "col-md-2">
-        <div id = "info">
+<div class="row quiz-metrics">
+    <div class="col-6 d-flex justify-content-center">
+        <div>
+            <p ><span>Question </span ><span id="question_num">{{question_num}}</span><span>/{{total_num}}</span></p>
         </div>
     </div>
-    <div class = "col-md-8 d-flex justify-content-center">
-        <div id = "answers">
-        </div>
-    </div>
-    <div class= "col-md-2 d-flex" id="quizScore">
-        <span>Current Score:</span><span id = "total_score">{{total_score}}/{{total_num}}</span>
+    <div class="col-6 d-flex justify-content-center">
+        <p>Your Score: <span id ="total_score">{{total_score}}</span></p>
     </div>
 </div>
-<div class = "row">
-    <div class= "col-md-2">
+<div class="row quiz-title">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="question-container d-flex">
+            <h2>{{question.question}}</h2>
+        </div>
     </div>
-    <div class = "col-md-8 d-flex justify-content-center">
+</div>
+<div class="row">
+    <div class="col-2">
+        <div id="info">
+        </div>
     </div>
-    <div class= "col-md-2">
+    <div class="col-8 d-flex justify-content-center">
+        <div id="answers">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 d-flex justify-content-end">
         <button id="continue" class="continue-btn"> Continue</button>
     </div>
 </div>

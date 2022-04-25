@@ -19,7 +19,7 @@ $(document).ready(function(){
         else{
             incorrect(id)
         }
-        console.log("out of if statment")
+  
         answer_to_save = {"correct": correctness,"id": $("#question_num").html()}
         console.log(id)
         $.ajax({
@@ -30,7 +30,7 @@ $(document).ready(function(){
             data : JSON.stringify(answer_to_save),
             success: function(result){
                 let total_score = result["total_score"]
-                console.log(total_score)
+                console.log("this is total score " + total_score)
                 $("#total_score").html(total_score)
                 
             },
