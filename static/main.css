@@ -14,7 +14,14 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+p {
+    margin: 0;
+}
 
+h6 {
+    padding: 0;
+    margin: 0;
+}
 
 /*--------------------------------------------------------------
 # General
@@ -96,6 +103,33 @@ nav * {
     margin-top: 30px;
 }
 
+#report {
+    margin-bottom: 30px;
+}
+
+.report-card {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px 5px 10px 5px;
+    padding: 0; 
+    height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.report-card-header {
+    height: 30%;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.report-card-content {
+    height: 70%;
+    padding: 5px;
+}
+ 
+#learning_message {
+    margin-top: 20px;
+}
 /*--------------------------------------------------------------
 # Quiz
 --------------------------------------------------------------*/
@@ -207,10 +241,6 @@ nav * {
 
 textarea:focus::placeholder {
     color: transparent;
-}
-
-.response{
-    margin: 10px;
 }
 
 .info{

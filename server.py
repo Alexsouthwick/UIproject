@@ -108,7 +108,7 @@ modules = {
    "3":{
       "id": "3",
       "title":"Blue Sky",
-      "text": """"""
+      "text": """""",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
       "audio": "/static/audio_files/tape_3.mp3",
       "next": "4"

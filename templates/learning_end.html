@@ -7,101 +7,231 @@
     let reports = {{reports|tojson}}
 </script>
 
-<div class="row">
+<div class="row" id="report">
     <div class="col-12 d-flex justify-content-center">
-        How you responded throught the exercises:
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 d-flex flex-column align-items-center">
-        After Letting Go:
-    </div>
-    <div class="col-3 d-flex flex-column align-items-center">
-        After Box Breathing:
-    </div>
-    <div class="col-3 d-flex flex-column align-items-center">
-        After Blue Sky:
-    </div>
-    <div class="col-3 d-flex flex-column align-items-center">
-        After Final Meditation:
+        <h3>How you responded throught the exercises</h3>
     </div>
 </div>
 <div class="row">
     <div class="col-3 d-flex flex-column">
-        Emotionally: <span class="response" id="let_feel"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Emotionally: <span class="response" id="bre_feel"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Emotionally: <span class="response" id="sky_feel"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Emotionally: <span class="response" id="fin_feel"></span>
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 d-flex flex-column">
-        Focusing on Breathing? <span class="response" id="let_bre"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Focusing on Breathing? <span class="response" id="bre_bre"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Focusing on Breathing? <span class="response" id="sky_bre"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Focusing on Breathing? <span class="response" id="fin_bre"></span>
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 d-flex flex-column">
-        Listening to your body? <span class="response" id="let_bod"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Listening to your body? <span class="response" id="bre_bod"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Listening to your body? <span class="response" id="sky_bod"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Listening to your body? <span class="response" id="fin_bod"></span>
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 d-flex flex-column">
-        Releasing thoughts? <span class="response" id="let_tho"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Releasing thoughts? <span class="response" id="bre_tho"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Releasing thoughts? <span class="response" id="sky_tho"></span>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Releasing thoughts? <span class="response" id="fin_tho"></span>
-    </div>
-</div>
-<div class="row">
-    <div class="col-3 d-flex flex-column">
-        Notes: <div class="response" id="let_notes"></div>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Notes: <div class="response" id="bre_notes"></div>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Notes: <div class="response" id="sky_notes"></div>
-    </div>
-    <div class="col-3 d-flex flex-column">
-        Notes: <div class="response" id="fin_notes"></div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 d-flex justify-content-center">
-        <div class = "info">
-            <div>Congratulations! You finished the learning portion!</div>
-            <div>Are you ready to take the quiz?</div>
+        <div class="d-flex justify-content-center"><h2>Letting Go</h2></div>
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Emotionally</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="let_feel"></p>
+            </div>
         </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="d-flex justify-content-center"><h2>Box Breathing</h2></div>
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Emotionally</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="bre_feel"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="d-flex justify-content-center"><h2>Blue Sky</h2></div>
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Emotionally</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="sky_feel"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="d-flex justify-content-center"><h2>Final Meditation</h2></div>
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Emotionally</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="fin_feel"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Focusing on Breathing?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="let_bre"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Focusing on Breathing?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="bre_bre"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Focusing on Breathing?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="sky_bre"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Focusing on Breathing?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="fin_bre"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Listen to your body?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="let_bod"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Listen to your body?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="bre_bod"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Listen to your body?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="sky_bod"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Listen to your body?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="fin_bod"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+     <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Releasing thoughts?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="let_tho"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Releasing thoughts?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="bre_tho"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Releasing thoughts?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="sky_tho"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Releasing thoughts?</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="fin_tho"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Notes</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="let_notes"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Notes</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="bre_notes"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Notes</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="sky_notes"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 d-flex flex-column">
+        <div class="report-card">
+            <div class="report-card-header">
+                <h6>Notes</h6>
+            </div>
+            <div class="report-card-content">
+                <p class="response" id="fin_notes"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="learning_message">
+    <div class="col-12 d-flex justify-content-center">
+        <p class="d-flex flex-column align-items-center">
+            Congratulations! You finished the learning portion!
+            <span>Are you ready to take the quiz?</span>
+        </p>
     </div>
 </div>
 <div class="row">
