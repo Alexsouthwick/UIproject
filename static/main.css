@@ -74,6 +74,10 @@ nav * {
     border-radius: 60px;
 }
 
+#startBtn {
+    margin-top: 30px;
+}
+
 .hero-container {
     padding-top: 50px;
     height: 100%;
@@ -86,6 +90,11 @@ nav * {
 .module-title {
     margin-bottom: 20px;
 }
+
+.module-text {
+    margin: 20px 0px 20px 0px;
+}
+
 .module-photo {
     height: 500px;
 }
@@ -245,4 +254,22 @@ textarea:focus::placeholder {
 
 .info{
     margin: 10px;
+}
+
+#startq {
+    margin-top: 20px;
+}
+
+#quizScore {
+    gap: 5px;
+}
+
+#question {
+    margin-bottom: 15px;
+}
+
+#notes_box {
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

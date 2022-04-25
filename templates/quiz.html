@@ -8,7 +8,6 @@
     let total_score = {{total_score|tojson}}
     let question_num = {{question_num|tojson}}
     let total_num = {{total_num|tojson}}
-    console.log(question)
 </script>
 
 <div class = "row">
@@ -16,9 +15,9 @@
     </div>
     <div class = "col-md-8 d-flex justify-content-center">
         <span id="question_num" hidden>{{question_num}}</span>
-        <span id ="question">
+        <h2 id ="question">
             {{question.question}} 
-        </span>
+        </h2>
     </div>
 </div>
 <div class = "row">
@@ -30,8 +29,8 @@
         <div id = "answers">
         </div>
     </div>
-    <div class= "col-md-1">
-        <span> Current Score: </span><span id = "total_score">{{total_score}}</span><span>/{{total_num}}</span>
+    <div class= "col-md-2 d-flex" id="quizScore">
+        <span>Current Score:</span><span id = "total_score">{{total_score}}/{{total_num}}</span>
     </div>
 </div>
 <div class = "row">

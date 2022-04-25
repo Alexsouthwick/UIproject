@@ -4,7 +4,7 @@ $(document).ready(function(){
     console.log(question["answers"])
     $.each(question["answers"], function(i, value){
         let new_answer= $("<div><button type='submit' class='answer' id='" + i + "' value='" + value + "'>" + value + "</button></div>");
-        $("#answers").append(new_answer);
+        $("#answers").append(new_answer);   
     })
 
 
