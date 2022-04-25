@@ -84,13 +84,23 @@ modules = {
    "1":{
       "id": "1", 
       "title":"Letting Go",
+      "text": """Letting go can be difficult. All day we hold deadlines, relationships, responsibilities, and everything in between.
+               Everyday can seem a grind and we are all waiting for the end to enjoy ourselves. In truth, there is no end, and when we 
+               get to the end of our time in the day, year, or life, we will realize that we actually live our lives in moments. 
+               The key to enjoying life’s moments is to give your mind a break and let go of what your holding on to. This doesn't mean to give up, or choose 
+               to fail. Letting go for a brief moment in the day will give your mind the break it needs to enjoy each moment. Letting go of what you can’t control is the first step to mindfulness. """,
       "image": "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
       "audio": "/static/audio_files/tape_1.mp3",
       "next": "2"
    },
    "2":{
       "id": "2",
-      "title":"Box Breathing",  
+      "title":"Box Breathing",
+      "text": """Box breathing, also known as square breathing, is a technique used when taking slow, deep 
+               breaths. It can heighten performance and concentration while also being a powerful stress reliever. 
+               It’s also called four-square breathing.Box breathing  involves exhaling to a count of four, holding 
+               your lungs empty for a four-count, inhaling at the same pace, and holding air in your lungs for a 
+               count of four before exhaling and beginning the pattern anew.""",
       "image": "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg", 
       "audio": "/static/audio_files/tape_2.mp3",
       "next": "3"
@@ -98,6 +108,7 @@ modules = {
    "3":{
       "id": "3",
       "title":"Blue Sky",
+      "text": """"""
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
       "audio": "/static/audio_files/tape_3.mp3",
       "next": "4"
