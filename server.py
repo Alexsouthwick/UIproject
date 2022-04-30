@@ -11,7 +11,7 @@ questions = {
         "answers": ["Judging Emotion", "Experiencing the here and now","Making happiness", "Perfecting meditation"],
         "correct": "Experiencing the here and now",
         "info": ["""Letting go is about releasing judgement on your thoughts 
-        and emotions. Judgement only increases the emotion""","""Letting Go is about relishing in the current moment, 
+        and emotions. Judgement only increases the emotion""","""Correct. Letting Go is about relishing in the current moment, 
         allowing your mind to rest and feel at peace""","""You can’t make happiness, happiness like any other emotion is 
         a feeling that comes and goes, you can release expectations and happiness will come in time.""","There is no perfect way to meditate"],
         "next": "2"
@@ -23,7 +23,7 @@ questions = {
         "correct": "Is an important tool in meditation",
         "info": ["""There is no need to force anythign in meditation. Your body knows
         how to breath, just guide it to where you want it to go.""", """There are many ways to meditate, breathing 
-        is an important tool, but not the only one.""", """Breathing is one of the many tools of meditation, it is often the first 
+        is an important tool, but not the only one.""", """Correct. Breathing is one of the many tools of meditation, it is often the first 
         one you learn and serves as a great base.""","""Nothing solves all problems. Meditation is not meant to solve problems but give your mind a rest."""],
         "next": "3"
     },
@@ -34,7 +34,7 @@ questions = {
         "correct": "Is about returning to a place of peace",
         "info": ["""There is no need to interrogate your emotions. Emotions are like clouds,
         just let them go, to return to your blue sky.""", """You are not your emotions. See your emotions as clouds. They don’t define you, just let 
-        them go.""", """When clouds come, let them go, and return to a place of happy confidence. Return to the blue sky. """,
+        them go.""", """Correct. When clouds come, let them go, and return to a place of happy confidence. Return to the blue sky. """,
         "There is no need to control your mind, emotions or thoughts. Remain at peace and let them go."],
         "next": "4"
     },
@@ -46,7 +46,7 @@ questions = {
          "correct": "Direct my focus on something",
          "info":["There is no need to let go of everything forever, it is an impossible task. Letting go just means giving your mind a break so you can enjoy the present moment.",
          "When letting go, you do not need to actively think about anything. Thinking is often the cause of mental suffering, so to let go, just allow your mind to focus on your breathing.",
-         "Letting go does not mean to forgo perception. Letting go means observing the present, and not ruminating on the past or future.",
+         "Correct. Letting go does not mean to forgo perception. Letting go means observing the present, and not ruminating on the past or future.",
          "No act in meditation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself To better solve your problems. "],
          "next": "5"
        },
@@ -59,7 +59,7 @@ questions = {
          "info":["Meditation involves lots of different techniques, not only letting go. ",
          "Nothing in meditation needs to be mastered, all one needs to do is begin.",
          "No act in meditation will solve all of your problems. Letting go allows your mind to rest and allows you to reorient yourself.",
-         "The purpose of meditation is to give your mind a break, the core of meditation is observing the present moment."],
+         "Correct. The purpose of meditation is to give your mind a break, the core of meditation is observing the present moment."],
          "next": "6"
        },
        "6":
@@ -85,9 +85,9 @@ modules = {
       "id": "1", 
       "title":"Letting Go",
       "text": """Letting go can be difficult. All day we hold deadlines, relationships, responsibilities, and everything in between.
-               Everyday can seem a grind and we are all waiting for the end to enjoy ourselves. In truth, there is no end, and when we 
+               Every day can seem like a grind and we are all waiting for the end to enjoy ourselves. In truth, there is no end, and when we 
                get to the end of our time in the day, year, or life, we will realize that we actually live our lives in moments. 
-               The key to enjoying life’s moments is to give your mind a break and let go of what your holding on to. This doesn't mean to give up, or choose 
+               The key to enjoying life’s moments is to give your mind a break and let go of what you are holding on to. This doesn't mean to give up, or choose 
                to fail. Letting go for a brief moment in the day will give your mind the break it needs to enjoy each moment. Letting go of what you can’t control is the first step to mindfulness. """,
       "image": "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
       "audio": "/static/audio_files/tape_1.mp3",
@@ -98,7 +98,7 @@ modules = {
       "title":"Box Breathing",
       "text": """Box breathing, also known as square breathing, is a technique used when taking slow, deep 
                breaths. It can heighten performance and concentration while also being a powerful stress reliever. 
-               It’s also called four-square breathing.Box breathing  involves exhaling to a count of four, holding 
+               It’s also called four-square breathing. Box breathing involves exhaling to a count of four, holding 
                your lungs empty for a four-count, inhaling at the same pace, and holding air in your lungs for a 
                count of four before exhaling and beginning the pattern anew.""",
       "image": "https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/1:1/w_2000,h_2000,c_limit/gettyimages-1146431497.jpg", 
