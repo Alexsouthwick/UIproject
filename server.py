@@ -88,7 +88,7 @@ modules = {
                Every day can seem like a grind and we are all waiting for the end to enjoy ourselves. In truth, there is no end, and when we 
                get to the end of our time in the day, year, or life, we will realize that we actually live our lives in moments. 
                The key to enjoying life’s moments is to give your mind a break and let go of what you are holding on to. This doesn't mean to give up, or choose 
-               to fail. Letting go for a brief moment in the day will give your mind the break it needs to enjoy each moment. Letting go of what you can’t control is the first step to mindfulness. """,
+               to fail. Letting go for a brief moment in the day will give your mind the break it needs to enjoy each moment. Letting go of what you can’t control is the first step to mindfulness.""",
       "image": "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
       "audio": "/static/audio_files/tape_1.mp3",
       "next": "2"
@@ -108,7 +108,10 @@ modules = {
    "3":{
       "id": "3",
       "title":"Blue Sky",
-      "text": """""",
+      "text": """The Blue Sky technique is one of the most powerful tools you have to become more mindful. Think of your mind as a blue sky. 
+               When your mind is calm and rested, it's a beautiful clear blue. Now, when you meditate, think of this blue sky. Of course thoughts will come to your mind, 
+               think of these as clouds pass through. Observe and let them pass, no matter how big the storm is, you can always see the blue sky if you just let the clouds go. 
+               This technique can be used throughout your day, whenever you feel overwhelmed. Your blue sky is yours and only yours.""",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
       "audio": "/static/audio_files/tape_3.mp3",
       "next": "4"
@@ -223,8 +226,6 @@ def submit():
    reports[report_id] = new_report
    print(reports)
    return "HI"
-
-
 
 
 

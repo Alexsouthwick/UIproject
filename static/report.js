@@ -2,9 +2,9 @@ $(document).ready(function(){
     let report = {"id": module["id"]}
     report["feelings"] = 0
     report["notes"] = ""
-    report["breathing"] = false
-    report["body"] = false
-    report["thoughts"] = false
+    report["breathing"] = 'No'
+    report["body"] = 'No'
+    report["thoughts"] = 'No'
     $("#next").click(function(){
         next = module["next"]
         let notes = $("#notes_box").val()
@@ -34,14 +34,19 @@ $(document).ready(function(){
     });
     $("#breathing").click(function(){
         console.log($("#breathing").is(':checked'))
-        console.log(module["id"])
-        report["breathing"] = $("#breathing").is(':checked')
+        console.log(module["id"]) 
+        // report["breathing"] = $("#breathing").is(':checked')
+        console.log(report["breathing"]);
+        report["breathing"] = 'Yes';
     })
     $("#body").click(function(){
-        report["body"] = $("#body").is(':checked')
+        // report["body"] = $("#body").is(':checked')
+        report["body"] = 'Yes';
+
     })
     $("#thoughts").click(function(){
-        report["thoughts"] = $("#thoughts").is(':checked')
+        // report["thoughts"] = $("#thoughts").is(':checked')
+        report["thoughts"] = 'Yes';
     })
     $("#feeling_scale").click(function () {
         console.log("feelings")

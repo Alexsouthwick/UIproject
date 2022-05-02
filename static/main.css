@@ -105,7 +105,7 @@ nav *:hover{
 .module-text {
     margin: 20px 0px 30px 0px;
     width: 75%;
-    text-indent: 50px;
+    /* text-indent: 50px; */
     line-height: 1.75;
 }
 
@@ -134,15 +134,17 @@ nav *:hover{
     border: 1px solid black;
     border-radius: 8px;
     margin: 10px 5px 10px 5px;
-    padding: 0; 
-    height: 100px;
+    height: 120px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .report-card-header {
-    height: 30%;
-    border-bottom: 1px solid black;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-blue);
+    color: white;
+    height: 20%;
+    padding: 8px 5px 8px 5px;
 }
 
 .report-card-content {
