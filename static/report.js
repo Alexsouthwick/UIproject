@@ -22,7 +22,6 @@ $(document).ready(function(){
             success: function(result){
                 console.log("next lession")
                 return None
-                
             },
             error: function(request, status, error){
                 console.log("Error");
