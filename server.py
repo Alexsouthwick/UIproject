@@ -110,7 +110,7 @@ modules = {
       "title":"Blue Sky",
       "text": """The Blue Sky technique is one of the most powerful tools you have to become more mindful. Think of your mind as a blue sky. 
                When your mind is calm and rested, it's a beautiful clear blue. Now, when you meditate, think of this blue sky. Of course thoughts will come to your mind, 
-               think of these as clouds pass through. Observe and let them pass, no matter how big the storm is, you can always see the blue sky if you just let the clouds go. 
+               think of these as clouds passing through. Observe and let them pass, no matter how big the storm is, you can always see the blue sky if you just let the clouds go. 
                This technique can be used throughout your day, whenever you feel overwhelmed. Your blue sky is yours and only yours.""",
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Canyon_de_Chelly_panorama_of_valley_from_mountain.jpg", 
       "audio": "/static/audio_files/tape_3.mp3",
