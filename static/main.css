@@ -357,3 +357,24 @@ textarea:focus::placeholder {
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+}
+
+.emotion-report {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-row {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.report-title {
+    color: var(--primary-blue);
+}
